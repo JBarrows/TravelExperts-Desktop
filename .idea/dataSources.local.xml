@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Travel Experts" uuid="e63baa23-c0c2-4c23-a990-3ea8b41f84ec">
+      <database-info product="MySQL" version="10.1.32-MariaDB" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" family="MARIADB" exact-version="10.1.32">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:travelexperts</introspection-schemas>
+    </data-source>
+    <data-source name="TravExPersistence/EclipseLink" uuid="b1341a78-c0b3-4e8e-b2aa-925b825d1f4b">
+      <database-info product="MySQL" version="10.1.32-MariaDB" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" family="MARIADB" exact-version="10.1.32">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+    <data-source name="mySql LocalTravEx" uuid="b8cd0c70-120c-467b-8170-26d28f2a3811">
+      <database-info product="MySQL" version="5.5.5-10.1.32-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MARIADB" exact-version="5.5.5">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+  </component>
+</project>
