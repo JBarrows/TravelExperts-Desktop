@@ -35,17 +35,7 @@ public class CustomerPurchasesPane extends javafx.scene.control.TitledPane {
 
         //Add buttons
         btnAdd = new Button("Add");
-        btnAdd.setOnAction(this::onAddButtonClicked);
         btnDelete = new Button("Delete");
-        btnDelete.setOnAction(this::onDeleteButtonClicked);
-    }
-
-    private void onDeleteButtonClicked(ActionEvent actionEvent) {
-
-    }
-
-    private void onAddButtonClicked(ActionEvent actionEvent) {
-
     }
 
     void setCustomer(Customer newCust) {

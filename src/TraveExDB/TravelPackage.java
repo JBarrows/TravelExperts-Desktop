@@ -8,21 +8,13 @@ import java.text.SimpleDateFormat;
 
 public class TravelPackage {
 
-    private SimpleIntegerProperty packageId = new SimpleIntegerProperty(this, "packageId");
+    private Integer packageId = null;
     private SimpleStringProperty pkgName = new SimpleStringProperty(this, "pkgName");
     private SimpleStringProperty pkgDesc = new SimpleStringProperty(this, "pkgDesc");
     private SimpleObjectProperty<Date> pkgStartDate = new SimpleObjectProperty<>(this, "pkgStartDate");
     private SimpleObjectProperty<Date> pkgEndDate = new SimpleObjectProperty<>(this, "pkgEndDate");
     private SimpleFloatProperty pkgBasePrice = new SimpleFloatProperty(this, "pkgBasePrice");
     private Float pkgAgencyCommission = null;
-
-    public int getPackageId() {
-        return packageId.get();
-    }
-
-    public void setPackageId(int packageId) {
-        this.packageId.set(packageId);
-    }
 
     public String getPkgName() {
         return pkgName.get();
@@ -103,5 +95,13 @@ public class TravelPackage {
 
     public void setPkgAgencyCommission(Float pkgAgencyCommission) {
         this.pkgAgencyCommission = pkgAgencyCommission;
+    }
+
+    public Integer getPackageId() {
+        return packageId;
+    }
+
+    public void setPackageId(Integer packageId) {
+        this.packageId = packageId;
     }
 }

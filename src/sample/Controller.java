@@ -7,15 +7,11 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,7 +21,7 @@ public class Controller implements Initializable {
     @FXML private Accordion propAccordion;
     @FXML private ListView<String> lvEntities;
 
-    private final ObservableList<String> listEntities = FXCollections.observableArrayList("Customers", "Packages");
+    private final ObservableList<String> listEntities = FXCollections.observableArrayList("Customers", "Packages", "Products", "Product Offerings", "Suppliers", "Bookings", "Flights", "Secrets", "Rewards", "Regions");
 
     private CustomerProperties customerProperties = null;
     private PackageProperties packageProperties = null;
@@ -37,7 +33,7 @@ public class Controller implements Initializable {
         lvEntities.setItems(listEntities);
 
         lvEntities.getSelectionModel().selectedItemProperty().addListener( new SelectedEntityChangedListener() );
-        lvEntities.getSelectionModel().select(0);
+        //lvEntities.getSelectionModel().select(0);
     }
 
     private void loadCustomerUI() {
@@ -56,8 +52,10 @@ public class Controller implements Initializable {
                     //Fill properties accordion
                     if (customerProperties == null) customerProperties = new CustomerProperties();
                     propAccordion.getPanes().setAll(customerProperties);
-                    customerProperties.addUpdateListener(custTable::fillTable);
-                    propAccordion.getPanes().get(1).setExpanded(true);
+                    customerProperties.getDetailsPanel().addUpdateListener(custTable::fillTable);
+
+                    //propAccordion.getPanes().get(1).setExpanded(true);
+
                     propertiesMode = "Customer";
                 }
                 // Send customer to properties module
@@ -65,7 +63,6 @@ public class Controller implements Initializable {
                 customerProperties.setCustomer(selectedCustomer);
 
             });
-
     }
 
     private void loadPackageUI() {
@@ -73,34 +70,50 @@ public class Controller implements Initializable {
         System.out.println("Loading Package UI");
 
         // Load PackageMainView
-        try {
-            Pane pnPkgMain = FXMLLoader.load(getClass().getResource("/sample/PackageMainView.fxml"));
+        PackageMainController ctrlPkgMain = new PackageMainController();
+        borderPane.setCenter(ctrlPkgMain);
+        ctrlPkgMain.setPropertiesListListener((paneList) -> {
+            propAccordion.getPanes().setAll(paneList);
+            propAccordion.getPanes().get(0).setExpanded(true);
+            propertiesMode = "NewPackage";
+        });
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         // Generate and fill table
-        PackagesTable pkgTable = new PackagesTable();
-        borderPane.setCenter(pkgTable);
-        pkgTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+        PackagesTable pkgTable = ctrlPkgMain.getPackagesTable();
+
+        //Add Selection listeners to table
+        pkgTable.getSelectionModel().selectedItemProperty().addListener(new pkgSelectionListener(pkgTable));
+
+    }
+
+    private class pkgSelectionListener implements ChangeListener<TravelPackage> {
+        private PackagesTable pkgTable;
+
+        public pkgSelectionListener(PackagesTable pkgTable) {
+
+            this.pkgTable = pkgTable;
+        }
+
+        @Override
+        public void changed(ObservableValue<? extends TravelPackage> observable, TravelPackage oldValue, TravelPackage newValue) {
             if (newValue == null)   return;
 
             //Make sure the right properties are showing
             if (!propertiesMode.equals("Package")) {
-                System.out.println("Showing Package Properties");
+                System.out.println("Loading Package Properties...");
                 //Fill properties accordion
                 if (packageProperties == null) packageProperties = new PackageProperties();
                 propAccordion.getPanes().setAll(packageProperties);
                 packageProperties.addUpdateListener(pkgTable::fillTable);
-                propAccordion.getPanes().get(2).setExpanded(true);
+
                 propertiesMode = "Package";
             }
             // Send package to properties module
-            TravelPackage selectedPackage = (TravelPackage)newValue;
-            packageProperties.setPackage(selectedPackage);
-        });
+            packageProperties.setPackage(newValue);
+        }
     }
 
+    // Listens for a change in entity selection (In the left-side listview)
     class SelectedEntityChangedListener implements ChangeListener<String> {
         @Override
         public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {

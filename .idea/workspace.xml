@@ -2,41 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_17_bin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/BookingDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/BookingDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/CustomerDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/DBTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/PackageDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/PackageDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/ProductSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/ProductSupplierDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/TravelPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TraveExDB/scratch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomerDetailPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomerProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/CustomersTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageContentsPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageDetailPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageMainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageMainView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackageTravellersPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/PackagesTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Traveller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/myActionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/small-cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/small-check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/small-minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/small-pencil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/small-plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/PackageForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/PropertiesPaneListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/TravEx.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/packageForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TravelExperts-Desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TravelExperts-Desktop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TravelExperts-Desktop/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TravelExperts-Desktop/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TravelExperts-Desktop/sample/PackageMainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TravelExperts-Desktop/sample/PackageMainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TraveExDB/PackageDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TraveExDB/PackageDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TraveExDB/TravelPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TraveExDB/TravelPackage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CustomerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/CustomerProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PackageMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PackageMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PackageMainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/packageMainView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -112,21 +95,23 @@
     <session id="-2070030349">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="NewPersistenceUnit" value="6" />
-          <entry key="fxml" value="184" />
-          <entry key="java" value="22765" />
+          <entry key="css" value="4" />
+          <entry key="fxml" value="593" />
+          <entry key="java" value="26981" />
           <entry key="scratch" value="78" />
           <entry key="txt" value="26" />
           <entry key="xml" value="89" />
@@ -134,17 +119,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSS" value="4" />
           <entry key="EclipseLink QL" value="6" />
-          <entry key="JAVA" value="22739" />
+          <entry key="JAVA" value="26955" />
           <entry key="PLAIN_TEXT" value="104" />
           <entry key="SQL" value="26" />
-          <entry key="XML" value="273" />
+          <entry key="XML" value="682" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="7" />
-          <entry key="java" value="66" />
+          <entry key="css" value="1" />
+          <entry key="fxml" value="12" />
+          <entry key="java" value="79" />
           <entry key="md" value="1" />
           <entry key="scratch" value="1" />
           <entry key="sql" value="1" />
@@ -153,11 +140,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="66" />
+          <entry key="CSS" value="1" />
+          <entry key="JAVA" value="79" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="19" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
     </session>
@@ -168,83 +156,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/PackageMainView.fxml">
+        <entry file="file://$PROJECT_DIR$/src/sample/packageMainView.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TraveExDB/PackageDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TraveExDB/BookingDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-              <folding>
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TraveExDB/BookingDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="334">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -252,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/PackageMainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="183">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -262,16 +178,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TraveExDB/Booking.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/packageForm.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="-40">
+              <caret line="11" column="61" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/PackageDetailPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="142">
+              <caret line="181" selection-start-line="181" selection-end-line="184" selection-end-column="5" />
               <folding>
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1557#1558#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6569#6570#0" expanded="true" />
+                <element signature="e#6614#6615#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/PackageForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="50" column="66" lean-forward="true" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3662#3663#0" expanded="true" />
+                <element signature="e#3698#3699#0" expanded="true" />
+                <element signature="e#4721#4722#0" expanded="true" />
+                <element signature="e#4773#4774#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="23" column="147" selection-start-line="23" selection-start-column="147" selection-end-line="23" selection-end-column="147" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#pkgSelectionListener#0;class#pkgSelectionListener#0;class#Controller#0" />
+                <element signature="method#changed#0;class#SelectedEntityChangedListener#0;class#Controller#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <folding>
+                <element signature="n#MenuBar#0;n#top#0;n#BorderPane#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/TravEx.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -279,8 +256,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TraveExDB/PackageDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="129" column="42" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
+            <state relative-caret-position="715">
+              <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -295,9 +284,10 @@
       <list>
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -312,6 +302,7 @@
       <find>setPacka</find>
       <find>save</find>
       <find>btnSa</find>
+      <find>hbox</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -335,8 +326,6 @@
         <option value="$PROJECT_DIR$/src/sample/PackageDB.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/DBTools.java" />
         <option value="$PROJECT_DIR$/src/sample/CustomersTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/TraveExDB/TravelPackage.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/CustomerDB.java" />
         <option value="$PROJECT_DIR$/src/sample/myActionListener.java" />
         <option value="$PROJECT_DIR$/src/sample/Product.java" />
@@ -354,17 +343,27 @@
         <option value="$PROJECT_DIR$/src/sample/Traveller.java" />
         <option value="$PROJECT_DIR$/src/sample/PackageTravellersPane.java" />
         <option value="$PROJECT_DIR$/src/sample/PackageDetailPane.java" />
-        <option value="$PROJECT_DIR$/src/sample/CustomerProperties.java" />
         <option value="$PROJECT_DIR$/src/sample/CustomerDetailPane.java" />
-        <option value="$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/PackageDetail.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/BookingDetail.java" />
-        <option value="$PROJECT_DIR$/src/TraveExDB/PackageDB.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/Booking.java" />
         <option value="$PROJECT_DIR$/src/TraveExDB/BookingDB.java" />
+        <option value="$PROJECT_DIR$/src/sample/testml.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/CustomerProperties.java" />
+        <option value="$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java" />
+        <option value="$PROJECT_DIR$/src/PackageForm.java" />
         <option value="$PROJECT_DIR$/src/sample/PackageMainView.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/PackageMainController.java" />
+        <option value="$PROJECT_DIR$/src/sample/PropertiesPaneListener.java" />
+        <option value="$PROJECT_DIR$/src/sample/PackageForm.fxml" />
+        <option value="$PROJECT_DIR$/src/TraveExDB/TravelPackage.java" />
+        <option value="$PROJECT_DIR$/src/sample/packageForm.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/packageMainView.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/TravEx.css" />
+        <option value="$PROJECT_DIR$/src/TraveExDB/PackageDB.java" />
+        <option value="$PROJECT_DIR$/src/sample/PackageMainController.java" />
+        <option value="$PROJECT_DIR$/src/sample/PackageForm.java" />
       </list>
     </option>
   </component>
@@ -375,7 +374,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -432,12 +431,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TravelExperts-Desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TravelExperts-Desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TraveExDB" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -459,16 +452,17 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539191809215" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539295563333" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Day7 Examples/Database Drivers/mysql-connector-java-5.1.17-bin.jar!/" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19375" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -479,10 +473,15 @@
       <recent name="TraveExDB" />
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\776592\Documents\TravelExperts-Desktop\src\icons" />
+      <recent name="C:\Users\776592\Documents\TravelExperts-Desktop\src" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="sample" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\776592\Documents\TravelExperts-Desktop\icons" />
       <recent name="C:\Users\776592\Documents\TravelExperts-Desktop\lib" />
     </key>
   </component>
@@ -585,12 +584,13 @@
       <workItem from="1538600985715" duration="30781000" />
       <workItem from="1538938024227" duration="12296000" />
       <workItem from="1539094997245" duration="21627000" />
-      <workItem from="1539181820601" duration="4362000" />
+      <workItem from="1539181820601" duration="26448000" />
+      <workItem from="1539270673436" duration="13081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120154000" />
+    <option name="totallyTimeSpent" value="155321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,7 +605,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5588915" visible="true" weight="0.20801815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5588915" visible="true" weight="0.21104388" />
       <window_info id="Structure" order="1" sideWeight="0.49191687" weight="0.24962063" />
       <window_info id="Favorites" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.44110855" side_tool="true" weight="0.16540213" />
@@ -614,12 +614,12 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32888147" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35081968" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2704918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32888147" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32786885" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Problems" order="9" />
@@ -668,7 +668,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/JPA_2_0_2_0.xml" />
     <entry file="file://$PROJECT_DIR$/src/TraveExDB/AgentsEntity.java" />
     <entry file="file://$PROJECT_DIR$/src/TraveExDB/CustomersEntity.java" />
     <entry file="file://$PROJECT_DIR$/out/production/TravelExperts-Desktop/META-INF/persistence.xml" />
@@ -760,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TraveExDB/TravelPackage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -803,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/myActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/PackagesTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -827,9 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,6 +819,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="36" column="46" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -851,20 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PackageDetailPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="186" column="53" lean-forward="true" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CustomerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -875,20 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,10 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,10 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding>
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,22 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TraveExDB/PackageDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="129" column="42" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,48 +892,162 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/testml.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/sample/CustomerProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/CustomerDetailPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="100" column="55" lean-forward="true" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/myActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TraveExDB/TravelPackage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-878">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2751#2752#0" expanded="true" />
+            <element signature="e#2793#2794#0" expanded="true" />
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#2744#2745#0" expanded="true" />
+            <element signature="e#2776#2777#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
+            <element signature="e#2869#2870#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/packageForm.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PropertiesPaneListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/CustomerPurchasesPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+        <state relative-caret-position="284">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PackageMainView.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/packageMainView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PackageMainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="334">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="210">
+          <caret line="23" column="147" selection-start-line="23" selection-start-column="147" selection-end-line="23" selection-end-column="147" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#pkgSelectionListener#0;class#pkgSelectionListener#0;class#Controller#0" />
+            <element signature="method#changed#0;class#SelectedEntityChangedListener#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/TravEx.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="n#MenuBar#0;n#top#0;n#BorderPane#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TraveExDB/PackageDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PackageMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PackageDetailPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="181" selection-start-line="181" selection-end-line="184" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6569#6570#0" expanded="true" />
+            <element signature="e#6614#6615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PackageForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="50" column="66" lean-forward="true" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3662#3663#0" expanded="true" />
+            <element signature="e#3698#3699#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4773#4774#0" expanded="true" />
           </folding>
         </state>
       </provider>

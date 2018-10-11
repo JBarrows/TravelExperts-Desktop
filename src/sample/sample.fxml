@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
+<?import java.net.URL?>
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -30,7 +31,7 @@
       </MenuBar>
    </top>
    <left>
-      <ListView id="lvEntities" fx:id="lvEntities" prefHeight="375.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView id="lvEntities" fx:id="lvEntities" prefHeight="375.0" prefWidth="200.0" BorderPane.alignment="CENTER" styleClass="entityList" />
    </left>
    <center>
 
@@ -38,4 +39,7 @@
    <right>
       <Accordion fx:id="propAccordion" maxWidth="255.0" BorderPane.alignment="CENTER" />
    </right>
+    <stylesheets>
+        <URL value="@TravEx.css" />
+    </stylesheets>
 </BorderPane>

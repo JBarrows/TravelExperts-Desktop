@@ -55,9 +55,9 @@ public class PackageDB {
                 "PkgAgencyCommission=? " +
                 "WHERE PackageId=? AND " +
                 "PkgName=? AND " +
-                "(PkgStartDate=? OR PkgStartDate IS NULL) AND " +
-                "(PkgEndDate=? OR PkgEndDate IS NULL) AND " +
-                "(PkgDesc=? OR PkgDesc IS NULL) AND " +
+                "PkgStartDate " + (oldPackage.getPkgStartDate() == null? "IS":"=") + " ? AND " +
+                "PkgEndDate " + (oldPackage.getPkgEndDate() == null? "IS":"=") + " ? AND " +
+                "PkgDesc" + (oldPackage.getPkgDesc() == null?" IS ":"=") + "? AND " +
                 "PkgBasePrice=? AND " +
                 "(PkgAgencyCommission=? OR PkgAgencyCommission IS NULL)";
         PreparedStatement stmt = conn.prepareStatement(sql);
@@ -145,5 +145,55 @@ public class PackageDB {
         }
 
         return pkg;
+    }
+
+    public static boolean insert(TravelPackage newPackage) {
+
+        try {
+            Connection conn = DBTools.getConnection();
+            String sql = "INSERT INTO packages(PkgName, PkgStartDate, PkgEndDate, PkgDesc, PkgBasePrice, PkgAgencyCommission) " +
+                    "VALUES (?, ?, ?, ?, ?, ?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            //Input parameters
+            stmt.setString(1, newPackage.getPkgName());
+            stmt.setDate(2, newPackage.getPkgStartDate());
+            stmt.setDate(3, newPackage.getPkgEndDate());
+            stmt.setString(4, newPackage.getPkgDesc());
+            stmt.setFloat(5, newPackage.getPkgBasePrice());
+            if (newPackage.getPkgAgencyCommission() == null)
+                stmt.setNull(6, Types.DECIMAL);
+            else
+                stmt.setFloat(6, newPackage.getPkgAgencyCommission());
+
+            boolean result = stmt.execute();
+
+            if (!result) {
+                if (stmt.getWarnings()!= null)
+                    throw new SQLException(stmt.getWarnings().toString());
+
+            }
+
+            return true;
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static void delete(TravelPackage pkg) {
+        try {
+            Connection conn = DBTools.getConnection();
+            String sql = "DELETE FROM packages WHERE PackageId=? AND PkgName=?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, pkg.getPackageId());
+            stmt.setString(2, pkg.getPkgName());
+
+            stmt.execute();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
