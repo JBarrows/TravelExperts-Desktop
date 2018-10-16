@@ -3,7 +3,7 @@ package TraveExDB;
 import java.util.*;
 
 public class Customer {
-    private int customerId;
+    private Integer customerId;
     private String custFirstName;
     private String custLastName;
     private String custAddress;
@@ -16,11 +16,11 @@ public class Customer {
     private String custEmail;
     private Integer agentId;
 
-    public int getCustomerId() {
+    public Integer getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
     }
 

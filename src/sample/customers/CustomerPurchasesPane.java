@@ -1,21 +1,15 @@
-package sample;
+package sample.customers;
 
 import TraveExDB.Booking;
 import TraveExDB.BookingDB;
 import TraveExDB.BookingDetail;
 import TraveExDB.Customer;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CustomerPurchasesPane extends javafx.scene.control.TitledPane {
 
@@ -47,7 +41,7 @@ public class CustomerPurchasesPane extends javafx.scene.control.TitledPane {
         root.setExpanded(true);
         tvPurchases.setRoot(root);
 
-        //Load Packages from DB
+        //Load packages from DB
         ArrayList<Booking> bookings = BookingDB.getBookings(newCust);
         if (bookings.isEmpty()) root.setValue("<None>");
         for (Booking b: bookings) {

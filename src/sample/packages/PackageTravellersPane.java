@@ -1,11 +1,11 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.PackageDB;
 import TraveExDB.TravelPackage;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import sample.Traveller;
 
 import java.util.ArrayList;
 
@@ -22,15 +22,14 @@ public class PackageTravellersPane extends TitledPane {
         vbox = (VBox) this.getContent();
         treeView = new TreeView();
         lblHeadCount = new Label("Head count: ");
-        vbox.getChildren().setAll(treeView, lblHeadCount, createButtons());
+        vbox.getChildren().setAll(treeView, lblHeadCount);//, createButtons());
     }
 
     private HBox createButtons() {
-        //TODO: Add button functions
         //Build Add and Remove buttons
         Button btnAdd = new Button("Add");
         Button btnRemove = new Button("Remove");
-        //TODO: Add Email button
+
         return new HBox(5, btnAdd, btnRemove);
     }
 
@@ -41,11 +40,10 @@ public class PackageTravellersPane extends TitledPane {
     }
 
     private TreeView createTree(TravelPackage travelPackage) {
-        //TODO: Build tree view
         // Build root from package
         TreeItem<String> root = new TreeItem<>(travelPackage.getPkgName());
 
-        // Add Customers as leaves
+        // Add customers as leaves
         // eg. [European Vacation]
         //     [   James Reed +1 ]
         //     [   Lula Oates    ]

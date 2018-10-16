@@ -12,7 +12,6 @@ public abstract class ProductSupplierDB {
         try {
             Connection conn = DBTools.getConnection();
 
-            //TODO: Retrieve ProductsSuppliers for this PackageId
             String sql = "SELECT p.ProductId, ProdName, s.SupplierId, SupName, ps.ProductSupplierId " +
                 "FROM ((travelexperts.products p " +
                 "INNER JOIN products_suppliers ps on p.ProductId = ps.ProductId) " +

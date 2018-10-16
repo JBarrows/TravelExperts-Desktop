@@ -1,13 +1,9 @@
 package TraveExDB;
 
-import TraveExDB.TravelPackage;
-import sample.PackageTravellersPane;
 import sample.Traveller;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class PackageDB {
 
@@ -45,7 +41,7 @@ public class PackageDB {
 
     public static int update(TravelPackage oldPackage, TravelPackage newPackage) throws SQLException, ClassNotFoundException {
         Connection conn = DBTools.getConnection();
-        //TODO: Complete Update query
+
         String sql = "UPDATE packages " +
                 "SET PkgName=?, " +
                 "PkgStartDate=?, " +

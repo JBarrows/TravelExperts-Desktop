@@ -1,4 +1,4 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.Customer;
 import TraveExDB.PackageDB;

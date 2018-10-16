@@ -1,4 +1,4 @@
-package sample;
+package sample.customers;
 
 import TraveExDB.Customer;
 import javafx.beans.property.SimpleObjectProperty;
@@ -15,7 +15,7 @@ public class CustomerProperties extends ArrayList<TitledPane> {
         return pnDetails;
     }
 
-    CustomerProperties() {
+    public CustomerProperties() {
         super();
 
         // Add Details pane
@@ -28,7 +28,7 @@ public class CustomerProperties extends ArrayList<TitledPane> {
 
     }
 
-    void setCustomer(Customer customer) {
+    public void setCustomer(Customer customer) {
         pnDetails.setCustomer(customer);
         pnPurchases.get().setCustomer(customer);
     }

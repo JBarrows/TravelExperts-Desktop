@@ -1,4 +1,4 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.TravelPackage;
 import javafx.scene.control.TitledPane;
@@ -8,16 +8,13 @@ import java.util.EventListener;
 
 public class PackageProperties extends ArrayList<TitledPane> {
 
-    TravelPackage travelPackage;
-    //TODO: use custom panes
     private final PackageDetailPane pnDetails;
     private final PackageContentsPane pnContents;
     private final PackageTravellersPane pnTravellers;
 
-    PackageProperties() {
+    public PackageProperties() {
         super();
 
-        //TODO: Build panes
         // Add Details pane
         pnDetails = new PackageDetailPane();
         this.add(pnDetails);
@@ -32,20 +29,18 @@ public class PackageProperties extends ArrayList<TitledPane> {
 
     }
 
-    void setPackage(TravelPackage travelPackage) {
-        this.travelPackage = travelPackage;
-
+    public void setPackage(TravelPackage travelPackage) {
         // Set panes
         pnDetails.setTravelPackage(travelPackage);
         pnContents.setTravelPackage(travelPackage);
         pnTravellers.setTravelPackage(travelPackage);
     }
 
-    void addUpdateListener(UpdateListener listener) {
+    public void addUpdateListener(UpdateListener listener) {
         pnDetails.addUpdateListener(listener);
     }
 
-    interface UpdateListener extends EventListener {
+    public interface UpdateListener extends EventListener {
         void onUpdate();
     }
 }

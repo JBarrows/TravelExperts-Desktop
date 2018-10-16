@@ -1,4 +1,4 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.PackageDB;
 import TraveExDB.TravelPackage;
@@ -7,11 +7,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-import javax.swing.*;
 import java.sql.SQLException;
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.sql.Date;
 import java.util.ArrayList;
 
@@ -24,13 +21,14 @@ public class PackageDetailPane extends TitledPane {
     private TextField txtPkgBasePrice, txtPkgAgencyCommission;
     private TravelPackage travelPackage;
     private ArrayList<PackageProperties.UpdateListener> updateListeners;
+    private VBox vbox;
 
     public PackageDetailPane() {
         super("Details", new VBox(5));
 
         updateListeners = new ArrayList<>();
 
-        VBox vbox = (VBox)getContent();
+        vbox = (VBox)getContent();
 
         //Create form controls
         txtPackageId = CreateTextField("ID");   //ID
@@ -117,11 +115,16 @@ public class PackageDetailPane extends TitledPane {
         // Update database
         TravelPackage newPackage = newPackageFromDetails();
         try {
-            //TODO: Check if update fails
             int rowsAffected = PackageDB.update(travelPackage, newPackage);
 
-            disableButtons();
-            triggerUpdate();
+            if (rowsAffected >= 1) {
+                disableButtons();
+                triggerUpdate();
+                if (rowsAffected > 1)
+                    (new Alert(Alert.AlertType.WARNING, "Multiple packages updated, please check database", ButtonType.NO)).show();
+            } else {
+                (new Alert(Alert.AlertType.ERROR, "No packages modified", ButtonType.OK)).show();
+            }
 
         } catch (SQLException | ClassNotFoundException e) {
 

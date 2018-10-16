@@ -1,4 +1,4 @@
-package sample;
+package sample.customers;
 
 import TraveExDB.Customer;
 import TraveExDB.CustomerDB;
@@ -27,7 +27,7 @@ public class CustomersTable extends TableView {
 
     private ObservableList<Customer> customers;
 
-    CustomersTable() {
+    public CustomersTable() {
         this.customers = FXCollections.observableArrayList();
 
         customers.addListener((ListChangeListener<Customer>) c -> setItems(customers));
@@ -75,7 +75,7 @@ public class CustomersTable extends TableView {
         }
     }
 
-    void fillTable() {
+    public void fillTable() {
         customers.setAll( CustomerDB.getAll() );
     }
 

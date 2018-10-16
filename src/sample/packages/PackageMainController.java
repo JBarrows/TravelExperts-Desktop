@@ -1,4 +1,4 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.PackageDB;
 import TraveExDB.TravelPackage;
@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import sample.PropertiesPaneListener;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class PackageMainController extends VBox {
 
     PropertiesPaneListener propertiesListListener;
 
-    PackageMainController() {
+    public PackageMainController() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("packageMainView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,7 +39,7 @@ public class PackageMainController extends VBox {
         });
     }
 
-    PackagesTable getPackagesTable() {
+    public PackagesTable getPackagesTable() {
         return tabPackages;
     }
 
@@ -49,7 +50,6 @@ public class PackageMainController extends VBox {
     private ArrayList<TitledPane> loadNewPackageForm() {
         PackageForm pkgForm = new PackageForm();
 
-        //TODO: Disable buttons until data is edited
         Button[] buttons = {
                 new Button("Save"),
                 new Button("Clear")
@@ -70,14 +70,14 @@ public class PackageMainController extends VBox {
 
         TitledPane formPane = new TitledPane("New Package", pkgForm);
         formPane.setExpanded(true);
-        ArrayList<TitledPane> al = new ArrayList<>();
-        al.add(formPane);
+        ArrayList<TitledPane> alPanes = new ArrayList<>();
+        alPanes.add(formPane);
 
         if (this.propertiesListListener != null) {
-            propertiesListListener.setPropertiesPane(al);
+            propertiesListListener.setPropertiesPane(alPanes, "NewPackage");
         }
 
-        return al;
+        return alPanes;
     }
 
     private void onNewSaveButtonClicked(PackageForm pkgForm) {

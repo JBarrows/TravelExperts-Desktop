@@ -11,6 +11,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import sample.customers.CustomerMain;
+import sample.customers.CustomerProperties;
+import sample.customers.CustomersTable;
+import sample.packages.PackageMainController;
+import sample.packages.PackageProperties;
+import sample.packages.PackagesTable;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +27,7 @@ public class Controller implements Initializable {
     @FXML private Accordion propAccordion;
     @FXML private ListView<String> lvEntities;
 
-    private final ObservableList<String> listEntities = FXCollections.observableArrayList("Customers", "Packages", "Products", "Product Offerings", "Suppliers", "Bookings", "Flights", "Secrets", "Rewards", "Regions");
+    private final ObservableList<String> listEntities = FXCollections.observableArrayList("CUSTOMERS", "PACKAGES", "Products", "Product Offerings", "Suppliers", "Bookings", "Flights", "Secrets", "Rewards", "Regions");
 
     private CustomerProperties customerProperties = null;
     private PackageProperties packageProperties = null;
@@ -40,29 +46,20 @@ public class Controller implements Initializable {
         //Show customer table and properties
         System.out.println("Loading Customer UI");
 
+        //Load CustomerMain
+        CustomerMain custMain = new CustomerMain();
+        borderPane.setCenter(custMain);
+        custMain.setPropertiesListListener((paneList, modeName) -> {
+            propAccordion.getPanes().setAll(paneList);
+            propAccordion.getPanes().get(0).setExpanded(true);
+            propertiesMode = modeName;
+        });
+
         //Generate and fill table
-        CustomersTable custTable = new CustomersTable();
-        borderPane.setCenter(custTable);
-        custTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-                if (newValue == null)   return;
+        CustomersTable custTable = custMain.getCustomersTable();
 
-                // Make sure that the right properties are showing
-                if (!propertiesMode.equals("Customer")) {
-                    System.out.println("Showing Customer Properties");
-                    //Fill properties accordion
-                    if (customerProperties == null) customerProperties = new CustomerProperties();
-                    propAccordion.getPanes().setAll(customerProperties);
-                    customerProperties.getDetailsPanel().addUpdateListener(custTable::fillTable);
-
-                    //propAccordion.getPanes().get(1).setExpanded(true);
-
-                    propertiesMode = "Customer";
-                }
-                // Send customer to properties module
-                Customer selectedCustomer = (Customer)newValue;
-                customerProperties.setCustomer(selectedCustomer);
-
-            });
+        // Add selection listeners to table
+        custTable.getSelectionModel().selectedItemProperty().addListener(new custSelectionListener(custTable));
     }
 
     private void loadPackageUI() {
@@ -72,10 +69,10 @@ public class Controller implements Initializable {
         // Load PackageMainView
         PackageMainController ctrlPkgMain = new PackageMainController();
         borderPane.setCenter(ctrlPkgMain);
-        ctrlPkgMain.setPropertiesListListener((paneList) -> {
+        ctrlPkgMain.setPropertiesListListener((paneList, modeName) -> {
             propAccordion.getPanes().setAll(paneList);
             propAccordion.getPanes().get(0).setExpanded(true);
-            propertiesMode = "NewPackage";
+            propertiesMode = modeName;
         });
 
         // Generate and fill table
@@ -84,6 +81,36 @@ public class Controller implements Initializable {
         //Add Selection listeners to table
         pkgTable.getSelectionModel().selectedItemProperty().addListener(new pkgSelectionListener(pkgTable));
 
+    }
+    private class custSelectionListener implements ChangeListener<Customer> {
+        private CustomersTable custTable;
+
+        public custSelectionListener(CustomersTable custTable) {
+
+            this.custTable = custTable;
+        }
+
+        @Override
+        public void changed(ObservableValue<? extends Customer> observable, Customer oldValue, Customer newValue) {
+            if (newValue == null)   return;
+
+            // Make sure that the right properties are showing
+            if (!propertiesMode.equals("Customer")) {
+                System.out.println("Showing Customer Properties");
+                //Fill properties accordion
+                if (customerProperties == null) customerProperties = new CustomerProperties();
+                propAccordion.getPanes().setAll(customerProperties);
+                customerProperties.getDetailsPanel().addUpdateListener(custTable::fillTable);
+
+                //propAccordion.getPanes().get(1).setExpanded(true);
+
+                propertiesMode = "Customer";
+            }
+            // Send customer to properties module
+            Customer selectedCustomer = (Customer)newValue;
+            customerProperties.setCustomer(selectedCustomer);
+
+        }
     }
 
     private class pkgSelectionListener implements ChangeListener<TravelPackage> {
@@ -117,11 +144,11 @@ public class Controller implements Initializable {
     class SelectedEntityChangedListener implements ChangeListener<String> {
         @Override
         public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-            switch(newValue){
-                case"Packages":
+            switch(newValue.toLowerCase()){
+                case"packages":
                     loadPackageUI();
                     break;
-                case"Customers":
+                case"customers":
                     loadCustomerUI();
                     break;
             }

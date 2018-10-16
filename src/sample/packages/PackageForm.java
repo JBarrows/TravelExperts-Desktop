@@ -1,13 +1,13 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.TravelPackage;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import sample.myActionListener;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -15,7 +15,6 @@ import java.time.LocalDate;
 
 public class PackageForm extends VBox {
 
-    //TODO: Add clear buttons to date fields
     @FXML private TextField txtPackageId;
     @FXML private TextField txtPkgName;
     @FXML private TextArea txtPkgDesc;
@@ -47,27 +46,30 @@ public class PackageForm extends VBox {
         //Set "onFieldChanged" listeners
         TextInputControl[] textControls = {txtPackageId, txtPkgName, txtPkgDesc, txtPkgBasePrice, txtPkgAgencyCommission};
         for (TextInputControl txt:textControls)
-            txt.textProperty().addListener((observable, oldValue, newValue) -> onFieldChanged());
+            txt.textProperty().addListener(this::onFieldChanged);
         DatePicker[] datePickers = {dpPkgStartDate, dpPkgEndDate};
         for (DatePicker dp : datePickers)
-            dp.valueProperty().addListener((observable, oldValue, newValue) -> onFieldChanged());
+            dp.valueProperty().addListener(this::onFieldChanged);
     }
 
     private void clearDatePicker(DatePicker datePicker) {
         datePicker.setValue(null);
-        onFieldChanged();
     }
 
-    private void onFieldChanged() {
+    private void onFieldChanged(ObservableValue observable, Object oldValue, Object newValue) {
         if (actionListener != null)
             actionListener.onAction();
     }
 
     TravelPackage getTravelPackage() {
-        //TODO: Validate
-        //TODO: Make sure that required fields are filled
+        String validationResponse = checkFields();
+        if ( validationResponse != ""){
+            Alert alert = new Alert(Alert.AlertType.WARNING, validationResponse, ButtonType.OK);
+            alert.show();
+        }
+
         TravelPackage p = new TravelPackage();
-        if (txtPackageId.getText() == null || txtPackageId.getText().equals(""))
+        if (txtPackageId.getText().isEmpty())
             p.setPackageId(null);
         else
             p.setPackageId(Integer.parseInt(txtPackageId.getText()));
@@ -82,6 +84,34 @@ public class PackageForm extends VBox {
                 Float.parseFloat(txtPkgAgencyCommission.getText()) );
 
         return p;
+    }
+
+    private String checkFields() {
+        // Check that required fields are filled
+        if (txtPkgName.getText().isEmpty()) return "Package name cannot be empty";
+        if (txtPkgBasePrice.getText().isEmpty()) return "Base price field cannot be empty";
+        // NOTE: We don't need to worry about the ID since it's not editable
+
+        // Check that description is not too long
+        if (txtPkgDesc.getText().length() >= 50) return "Package description cannot be more than 50 characters";
+
+        // Check that End date is not before Start date
+        LocalDate startDate = dpPkgStartDate.getValue();
+        LocalDate endDate = dpPkgEndDate.getValue();
+        if (startDate != null && endDate != null && startDate.isAfter(endDate) )
+            return "Package end date must be after start date";
+
+        // Check that price and commission are numbers
+        try {
+            Double.parseDouble(txtPkgBasePrice.getText());
+            if (!txtPkgBasePrice.getText().isEmpty())
+                Double.parseDouble(txtPkgBasePrice.getText());
+
+        } catch (NumberFormatException exception) {
+            return "Base and Commission must be numbers";
+        }
+
+        return "";
     }
 
     public SimpleObjectProperty<TravelPackage> travelPackageProperty() {

@@ -1,4 +1,4 @@
-package sample;
+package sample.packages;
 
 import TraveExDB.ProductSupplier;
 import TraveExDB.ProductSupplierDB;
@@ -10,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.util.Callback;
 
 public class PackageContentsPane extends TitledPane {
 
@@ -28,7 +27,7 @@ public class PackageContentsPane extends TitledPane {
 
         //Add buttons
         HBox hbox = buildButtons();
-        vbox.getChildren().add(hbox);
+        //vbox.getChildren().add(hbox);
     }
 
     private HBox buildButtons() {
